@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Post } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -17,6 +18,8 @@ export declare type StoryOverridesProps = {
     ReadTime?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type StoryProps = React.PropsWithChildren<Partial<FlexProps> & {
+    postModel?: Post;
+} & {
     overrides?: StoryOverridesProps | undefined | null;
 }>;
 export default function Story(props: StoryProps): React.ReactElement;

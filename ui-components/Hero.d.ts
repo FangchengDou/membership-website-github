@@ -7,6 +7,7 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type HeroOverridesProps = {
     Hero?: PrimitiveOverrideProps<FlexProps>;
@@ -17,6 +18,8 @@ export declare type HeroOverridesProps = {
     "For just $99"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type HeroProps = React.PropsWithChildren<Partial<FlexProps> & {
+    handleClick?: (event: SyntheticEvent) => void;
+} & {
     overrides?: HeroOverridesProps | undefined | null;
 }>;
 export default function Hero(props: HeroProps): React.ReactElement;

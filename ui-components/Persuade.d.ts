@@ -7,6 +7,7 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type PersuadeOverridesProps = {
     Persuade?: PrimitiveOverrideProps<FlexProps>;
@@ -15,6 +16,9 @@ export declare type PersuadeOverridesProps = {
     Banner?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type PersuadeProps = React.PropsWithChildren<Partial<FlexProps> & {
+    banner?: String;
+    handleClick?: (event: SyntheticEvent) => void;
+} & {
     overrides?: PersuadeOverridesProps | undefined | null;
 }>;
 export default function Persuade(props: PersuadeProps): React.ReactElement;

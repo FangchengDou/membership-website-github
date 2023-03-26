@@ -8,6 +8,7 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { LogoProps } from "./Logo";
 import { ButtonProps, FlexProps, IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavOverridesProps = {
     Nav?: PrimitiveOverrideProps<FlexProps>;
@@ -23,6 +24,11 @@ export declare type NavOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type NavProps = React.PropsWithChildren<Partial<FlexProps> & {
+    username?: String;
+    authText?: String;
+    avatar?: String;
+    handleAuth?: (event: SyntheticEvent) => void;
+} & {
     overrides?: NavOverridesProps | undefined | null;
 }>;
 export default function Nav(props: NavProps): React.ReactElement;

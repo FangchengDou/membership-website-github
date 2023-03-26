@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import Logo from "./Logo";
 import { Button, Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Nav(props) {
-  const { overrides, ...rest } = props;
+  const { username, authText, avatar, handleAuth, overrides, ...rest } = props;
   return (
     <Flex
       gap="352px"
@@ -62,6 +62,7 @@ export default function Nav(props) {
           borderRadius="8px"
           padding="11px 19px 11px 19px"
           backgroundColor="rgba(17,35,49,1)"
+          display={username == "none" ? "none" : "flex"}
           {...getOverrideProps(overrides, "User36473262")}
         >
           <Flex
@@ -144,7 +145,7 @@ export default function Nav(props) {
                   right="29.17%"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children="C"
+                  children={username}
                   {...getOverrideProps(overrides, "C")}
                 ></Text>
               </View>
@@ -180,7 +181,8 @@ export default function Nav(props) {
           size="default"
           isDisabled={false}
           variation="link"
-          children="Sign Out"
+          children={authText}
+          onClick={handleAuth}
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>

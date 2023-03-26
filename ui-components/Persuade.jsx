@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function Persuade(props) {
-  const { overrides, ...rest } = props;
+  const { banner, handleClick, overrides, ...rest } = props;
   return (
     <Flex
       gap="33px"
@@ -57,6 +57,7 @@ export default function Persuade(props) {
         isDisabled={false}
         variation="primary"
         children="Become a Member"
+        onClick={handleClick}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Image
@@ -72,6 +73,7 @@ export default function Persuade(props) {
         borderRadius="16px"
         padding="0px 0px 0px 0px"
         objectFit="unset"
+        src={banner}
         {...getOverrideProps(overrides, "Banner")}
       ></Image>
     </Flex>

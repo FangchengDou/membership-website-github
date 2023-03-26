@@ -7,6 +7,8 @@
 export { default as Persuade } from "./Persuade";
 export { default as Hero } from "./Hero";
 export { default as Story } from "./Story";
+export { default as TestimonyCollection } from "./TestimonyCollection";
+export { default as StoryCollection } from "./StoryCollection";
 export { default as Testimony } from "./Testimony";
 export { default as Footer } from "./Footer";
 export { default as Nav } from "./Nav";

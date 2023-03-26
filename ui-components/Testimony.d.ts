@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Testimonial } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -18,6 +19,8 @@ export declare type TestimonyOverridesProps = {
     image?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type TestimonyProps = React.PropsWithChildren<Partial<ViewProps> & {
+    testimonyModel?: Testimonial;
+} & {
     overrides?: TestimonyOverridesProps | undefined | null;
 }>;
 export default function Testimony(props: TestimonyProps): React.ReactElement;
