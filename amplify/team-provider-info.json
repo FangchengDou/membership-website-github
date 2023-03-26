@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-membershipwebsitegit-staging-220818-authRole",
+      "UnauthRoleArn": "arn:aws:iam::393479331911:role/amplify-membershipwebsitegit-staging-220818-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::393479331911:role/amplify-membershipwebsitegit-staging-220818-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-membershipwebsitegit-staging-220818-deployment",
+      "UnauthRoleName": "amplify-membershipwebsitegit-staging-220818-unauthRole",
+      "StackName": "amplify-membershipwebsitegit-staging-220818",
+      "StackId": "arn:aws:cloudformation:us-west-1:393479331911:stack/amplify-membershipwebsitegit-staging-220818/b727d9f0-cc22-11ed-a92a-060123629d0b",
+      "AmplifyAppId": "d32fte3gegovsk"
+    },
+    "categories": {
+      "auth": {
+        "membershipwebsitegithub": {}
+      }
+    }
+  }
+}
