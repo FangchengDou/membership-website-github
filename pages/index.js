@@ -20,7 +20,7 @@ function index() {
   }
   
   return (
-    <Layout handleClick={() => {router.push("/post");}} authText="Sign Up" username="none">
+    <Layout handleClick={() => {router.push("/post");}} authText="Sign in" username="none">
       <View marginBottom="135px">
         <Hero handleClick={handleClick} />
       </View>
@@ -28,7 +28,7 @@ function index() {
         <TestimonyCollection />
       </View>
       <Flex justifyContent={"center"}>
-        <Persuade banner="https://i.imgur.com/MxbD3N4.png" />
+        <Persuade banner="https://i.imgur.com/MxbD3N4.png" handleClick={handleClick}/>
       </Flex>
       <View marginTop="50px" marginBottom="50px">
         <Footer />
