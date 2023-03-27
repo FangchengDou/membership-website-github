@@ -1,5 +1,19 @@
 {
   "api": {
+    "apiauth": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "lambdafunctionauth"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "membershipwebsitegithub": {
       "dependsOn": [],
       "output": {
@@ -46,6 +60,48 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "lambdafunctionauth": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "membershipwebsitegithub"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_lambdafunctionauth_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambdafunctionauth"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambdafunctionauth_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambdafunctionauth"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambdafunctionauth_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambdafunctionauth"
+        }
+      ]
     }
   }
 }

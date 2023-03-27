@@ -14,6 +14,17 @@
     "categories": {
       "auth": {
         "membershipwebsitegithub": {}
+      },
+      "function": {
+        "lambdafunctionauth": {
+          "secretsPathAmplifyAppId": "d32fte3gegovsk",
+          "deploymentBucketName": "amplify-membershipwebsitegit-staging-220818-deployment",
+          "s3Key": "amplify-builds/lambdafunctionauth-3345544672754c477968-build.zip"
+        }
+      },
+      "api": {
+        "membershipwebsitegithub": {},
+        "apiauth": {}
       }
     }
   }
