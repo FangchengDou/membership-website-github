@@ -145,7 +145,7 @@ export default function Nav(props) {
                   right="29.17%"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={username}
+                  children={avatar}
                   {...getOverrideProps(overrides, "C")}
                 ></Text>
               </View>
@@ -169,7 +169,7 @@ export default function Nav(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Christian Nwamba"
+              children={username}
               {...getOverrideProps(overrides, "Name")}
             ></Text>
           </Flex>
